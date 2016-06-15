@@ -1,16 +1,21 @@
-# React Stateless Component Template
+# React Component Template
 
-React stateless component scaffolding for authoring components independent of a project.
+React Component dev environment for authoring & publishing react components independent of a project.
+
+
+## Features
+
+*   [React](https://facebook.github.io/react/): THE component-based view library.
+*   [WebPack](https://webpack.github.io/): module bundler.
+*   [PostCSS](https://github.com/postcss/postcss): CSS transformations via JS
+*   [CSS Modules](https://github.com/css-modules/css-modules): private name spaces for css classes.
+*   [CSSNext](http://cssnext.io/): future CSS today.
+*   [React StoryBook](https://github.com/kadirahq/react-storybook): a component authoring sandbox. also component functional testing .
+*   [Enzyme](https://github.com/airbnb/enzyme) & [Tape](https://github.com/substack/tape): unit testing
+*   [Eslint](http://eslint.org/): JS linting.
 
 
 ## Development
-
-### Features
-
-*   es6 & stage2 support
-*   unit testing via tape and enzyme
-*   linting via eslint
-*   UI testing via webpack-dev-server
 
 
 ### Commands
@@ -18,28 +23,13 @@ React stateless component scaffolding for authoring components independent of a 
 *   `npm start` to run a dev server to view changes during development (port:8080)
 *   `npm test` to run unit tests.
 *   `npm run lint` to lint files.
-*   `npm run ssr` to view a server-side rendered view of the component (port:8081)
 
 
 ### Authoring
 
-Edit the contents of the [src](src) directory.
+Edit the contents of the [src](src) directory:
 
-
-### Files
-
-*   [./src/index.js](./src/index.js): main JSX export
-*   [./src/style.css](./src/style.css): components main style
-*   [./src/data.js](./src/data.js): the default props for the component
-*   [./src/test.js](./src/test.js): unit test for the component
-*   [./src/demo.js](./src/demo.js): a JSX demo of the component
-
-
-
-## Required Loaders
-
-For this component to be consumed and bundled in a project, the project consuming this module must enable the following webpack loaders (or equivalent).
-
-*   babel-loader configured with stage2 & react, and react-require plugins
-*   style-loader, css-loader, postcss-loader, postcss-import, postcss-cssnext
-*   file-loader
+*   [./src/Component.js](./src/Component.js): main JSX export
+*   [./src/Component.js](./src/Component.js): components main style
+*   [./src/Component.spec.js](./src/Component.spec.js): unit test for the component
+*   [./src/ComponentStory.js](./src/ComponentStory.js): the [react-storybook Story](https://github.com/kadirahq/react-storybook) for function/ui testing
