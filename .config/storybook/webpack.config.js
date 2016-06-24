@@ -2,15 +2,7 @@ const cssnext = require('postcss-cssnext');
 const cssimport = require('postcss-import');
 const path = require('path');
 
-// whitelist of components (and their deps) installed
-// via npm install (in node_modules)
-const whitelist = require('./whitelist.json');
-
-// ignore all packages in node_modules, except for things in the whitelist
-const excludeRegExp = whitelist.length
-    ? new RegExp(`node_modules.(?!${whitelist.join("|")})`)
-    : path.resolve(__dirname, '../../node_modules/');
-
+const whiteLister = require('./whitelister.js');
 
 module.exports = {
     module: {
@@ -18,7 +10,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader?cacheDirectory',
-                exclude: excludeRegExp
+                exclude: whiteLister()
             },
 
             {
